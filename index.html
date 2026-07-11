@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>KIRA AIRDROP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
+
+    #logo {
+      width: 220px;
+      margin-top: 20px;
+    }
+
+    #clicks {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+
+    button {
+      width: 80%;
+      padding: 15px;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #connectWalletBtn {
+      background: #444;
+      color: #fff;
+      opacity: 0.8;
+    }
+
+    #rechargeBtn {
+      background: #00c853;
+      color: #fff;
+    }
+
+    #dog {
+      width: 260px;
+      margin-top: 20px;
+      transition: transform 0.1s linear;
+    }
+
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #111;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .navbar img {
+      width: 35px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGO -->
+  <img id="logo" src="img/logo.png">
+
+  <!-- CLICK COUNTER -->
+  <div id="clicks">0</div>
+
+  <!-- CONNECT WALLET -->
+  <button id="connectWalletBtn">Connect Wallet (Coming Soon)</button>
+
+  <!-- RECHARGE ENERGY -->
+  <button id="rechargeBtn" onclick="rechargeEnergy()">Recharge Energy (200 Clicks)</button>
+
+  <!-- DOG CLICKER -->
+  <img id="dog" src="img/dog.png" onclick="tapDog()">
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="info.html"><img src="img/info.png"></a>
+    <a href="index.html"><img src="img/home.png"></a>
+    <a href="leaderboard.html"><img src="img/stats.png"></a>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="ads.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>

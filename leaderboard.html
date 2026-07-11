@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KIRA Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <img id="logo" src="img/logo.png">
+
+  <h2>Leaderboard</h2>
+
+  <div id="board"></div>
+
+  <div class="navbar">
+    <a href="info.html"><img src="img/info.png"></a>
+    <a href="index.html"><img src="img/home.png"></a>
+    <a href="leaderboard.html"><img src="img/stats.png"></a>
+  </div>
+
+  <script>
+    async function loadBoard() {
+      const res = await fetch("https://kira-ai91.onrender.com/api/leaderboard");
+      const users = await res.json();
+
+      let html = "";
+      users.forEach((u, i) => {
+        html += `<p>#${i+1} — ${u.telegramId} — ${u.clicks} clicks</p>`;
+      });
+
+      document.getElementById("board").innerHTML = html;
+    }
+
+    loadBoard();
+  </script>
+
+</body>
+</html>
